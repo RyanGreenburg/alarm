@@ -29,6 +29,7 @@ class AlarmDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     private func updateViews() {
@@ -64,5 +65,8 @@ class AlarmDetailTableViewController: UITableViewController {
         } else {
             AlarmController.shared.addAlarm(fireDate: date, name: name, enabled: enabled)
         }
+        navigationController?.popViewController(animated: true)
     }
 }
+
+
